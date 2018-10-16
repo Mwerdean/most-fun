@@ -1,0 +1,130 @@
+.navbar {
+    position: fixed;
+    background-color: black;
+    width: 100px;
+    display: inline-block;
+    height: 100vh;
+    z-index: 100;
+    transition: all .5s ease-in-out;
+}
+
+.show-nav-enter {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+.show-nav-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 0.3s ease-out;
+}
+
+
+.open-nav {
+    width: 15%;
+    transition: all .7s ease-in-out;
+}
+
+.nav-body {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.vertical-text {
+    color: grey;
+    transform: rotate(90deg);
+    margin-top: 40vh;
+    display: flex;
+    letter-spacing: 3px;
+    opacity: .9;
+    transition: opacity .5s ease-in-out;
+    transition-delay: 0.4s;
+    font-size: 1.3em
+}
+
+.vertical-r {
+    opacity: 0;
+    transition: none;
+    
+}
+
+.display-none {
+    display: none;
+}
+
+.menu-options {
+    display: initial;
+    color: white;
+    margin-top: 50px;
+    margin-left: 90px;
+    font-size: 2em;
+    > div {
+        margin-top: 40px;
+
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                > div {
+        
+                    opacity: 0;
+        
+                    &:nth-child(1) {
+                        color: gray;
+                        letter-spacing: 3px;
+                        font-size: .5em;
+                        text-transform: uppercase;
+                        animation-name: 'menu-second';
+                        animation-duration: 800ms;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                        animation-delay: .6s;
+                    }
+                }
+            }
+        }
+
+        @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+                > div {
+        
+                    opacity: 0;
+        
+                    &:nth-child(2) {
+                        animation-name: 'menu-first';
+                        animation-duration: 500ms * $i;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                        animation-delay: .4s;
+                    }
+                }
+            }
+        }
+        
+    }   
+}
+
+@keyframes menu-second {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .6;
+    }
+}
+@keyframes menu-first {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.hamburger-helper {
+
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}

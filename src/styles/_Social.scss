@@ -1,0 +1,35 @@
+.social {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    > * {
+        margin:5px 20px 5px 5px;
+    }
+    
+}
+
+.socialmate {
+    transform: translateY(-50px);
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+            animation-name: 'social-anim';
+            animation-duration: 500ms * $i;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+        }
+    }
+}
+
+@keyframes social-anim {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

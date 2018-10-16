@@ -1,0 +1,42 @@
+@import 'TitleAnimation';
+@import 'Navbar';
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+@import 'Social';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+
+  button {
+    outline: none;
+}
+  
+  .flex {
+    display: flex;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  
+.br {
+  background-color: rgb(53, 53, 53);
+}
+
+.nothing {
+  height: 100vh;
+  width: 2px;
+}
+  
