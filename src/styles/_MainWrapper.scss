@@ -1,0 +1,17 @@
+.body {
+    width: 100%;
+    margin-top: 10%;
+
+    > title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 3em;
+
+        div {
+            text-transform: uppercase;
+        }
+    }
+}
+

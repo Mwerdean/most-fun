@@ -1,3 +1,62 @@
+.body {
+  width: 100%;
+  margin-top: 10%; }
+  .body > title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 3em; }
+    .body > title div {
+      text-transform: uppercase; }
+
+.projects {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center; }
+
+.project-description {
+  text-align: right;
+  margin-top: 100px;
+  width: 30%;
+  color: white;
+  opacity: .8;
+  padding-left: 10%; }
+
+.project-description2 {
+  margin-top: 100px;
+  width: 30%;
+  color: white;
+  opacity: .8; }
+
+.hover-focus {
+  width: 35%;
+  position: relative;
+  left: 67%;
+  margin-top: 10%;
+  z-index: 1000; }
+
+.title-card {
+  position: relative;
+  left: 10%;
+  z-index: 500;
+  margin-top: 40px;
+  margin-left: -120px;
+  pointer-events: none; }
+  .title-card :first-child {
+    font-size: 2em;
+    color: gray;
+    opacity: .6; }
+  .title-card :nth-child(2) {
+    font-size: 5em;
+    font-weight: 500;
+    color: #777;
+    animation-delay: 0.4s;
+    animation-duration: 500ms; }
+    .title-card :nth-child(2)::after {
+      animation-delay: 0.4s;
+      animation-duration: 500ms; }
+
 .header {
   width: 100%;
   display: flex;
@@ -36,6 +95,31 @@
     width: 0%; }
   100% {
     width: 40%; } }
+
+.reveal-picture {
+  position: relative;
+  font-size: 4vw;
+  margin: 5px;
+  letter-spacing: 4px; }
+  .reveal-picture::after {
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    content: "";
+    position: absolute;
+    z-index: 499;
+    top: 0;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    background-color: #c4ac6f;
+    transform: scaleX(1);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: revealer-text; }
 
 .reveal-text1,
 .reveal-text1::after {
@@ -1087,6 +1171,18 @@
   100% {
     transform: translateY(0px); } }
 
+.body {
+  width: 100%;
+  margin-top: 10%; }
+  .body > title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 3em; }
+    .body > title div {
+      text-transform: uppercase; }
+
 body {
   margin: 0;
   padding: 0;
@@ -1105,6 +1201,15 @@ button {
 
 .absolute {
   position: absolute; }
+
+::-webkit-scrollbar {
+  width: 8px; }
+
+::-webkit-scrollbar-track {
+  background: #ddd; }
+
+::-webkit-scrollbar-thumb {
+  background: #666; }
 
 .br {
   background-color: #353535; }

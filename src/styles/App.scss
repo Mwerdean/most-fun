@@ -1,7 +1,13 @@
+@import 'Works';
 @import 'TitleAnimation';
 @import 'Navbar';
 @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 @import 'Social';
+@import 'MainWrapper';
+
+
+
+
 
 body {
     margin: 0;
@@ -29,7 +35,17 @@ body {
   .absolute {
     position: absolute;
   }
-
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+   
+  ::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #666; 
+  }
   
 .br {
   background-color: rgb(53, 53, 53);
