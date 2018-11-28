@@ -156,7 +156,7 @@ export default class HoverPicture extends Component {
         }
         return (
           <div
-            className={this.settings.translateX ? ``: `reveal-picture`}
+            className={`${this.settings.translateX ? ``: `reveal-picture`} ${this.props.animate ? `reveal-picture-animate`:``}`}
             style={style}
             onMouseEnter={this.handleMouseEnter}
             onMouseMove={this.handleMouseMove}
