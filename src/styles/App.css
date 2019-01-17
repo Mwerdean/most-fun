@@ -71,19 +71,6 @@
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
 
-.reveal-text1-before {
-  position: relative;
-  font-size: 4vw;
-  display: block;
-  user-select: none;
-  animation-name: reveal-text;
-  color: #c4ac6f;
-  white-space: nowrap;
-  cursor: default;
-  margin: 5px;
-  letter-spacing: 4px;
-  visibility: hidden; }
-
 .reveal-text1 {
   position: relative;
   font-size: 4vw;
@@ -1207,6 +1194,7 @@
   .title-card-right :nth-child(2) {
     letter-spacing: 4px;
     margin-top: 1%;
+    margin: 5px;
     font-size: 5em;
     font-weight: 500;
     color: #777;
@@ -1215,6 +1203,9 @@
     .title-card-right :nth-child(2)::after {
       animation-delay: 0.4s;
       animation-duration: 500ms; }
+
+.title-hidden {
+  visibility: hidden; }
 
 @media (min-width: 1800px) {
   .title-card-right {

@@ -88,20 +88,6 @@
     animation-timing-function: cubic-bezier(0.0,0.0,0.2,1) 
 }
 
-.reveal-text1-before {
-    position: relative;
-    font-size: 4vw;
-    display: block;
-    user-select: none;
-    animation-name: reveal-text;
-    color:#c4ac6f;
-    white-space: nowrap;
-    cursor: default;
-    margin: 5px;
-    letter-spacing: 4px;
-    visibility: hidden;
-}
-
 .reveal-text1 {
     position: relative;
     font-size: 4vw;

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import HoverPicture from './HoverPicture'
 import ScentricStore from '../assets/scentric-store-crop.png'
 import DesertLymphaticStore from '../assets/desertlymphatic.png'
+import BasisStore from '../assets/basis-store.png'
 import Musk from '../assets/elon-musk2.png'
 
 const options = {
@@ -21,6 +22,7 @@ export default class Works extends Component {
         }
         this.ref1 = React.createRef()
         this.ref2 = React.createRef()
+        this.ref3 = React.createRef()
     }
     componentWillMount() {
         console.log(this.ref1)
@@ -36,6 +38,10 @@ export default class Works extends Component {
                 console.log('animate2:' ,this.state.animate2)
                 this.setState({ animate2: true })
             }          
+            if(scrollTop > this.ref3.current.offsetTop - 400) {
+                console.log('animate2:' ,this.state.animate2)
+                this.setState({ animate3: true })
+            }          
         })
     }
     componentWillUnmount() {
@@ -50,14 +56,12 @@ export default class Works extends Component {
                 </title>
                 <div className='projects' ref={this.ref1}>
                     <div className='project-description'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Scentric is a full-stack MERN (MongoDB, Express, React, Node) application with the exeption of using a Postgres database over MongoDB. The website is a complete ecommerce platform, including accounts, admin, statistics, and live chat. Despite being created only to show of our skills, the website could be turned into a fully functional product. Many technologies were used when making this project including but not limited to: <br /> React | Redux | JavaScript(ES6) | CSS | Sass | NodeJS | ExpressJS | Massive | PostgreSQL | Sockets | Auth0 | ChartJS
                     </div>
-                        <div className='title-card'>
-                            <div>- 0 1</div>
-                            {this.state.animate &&
-                            <div className={this.state.animate ? `reveal-text1`: ``}>Scentric</div>
-                            }
-                        </div>
+                    <div className='title-card'>
+                        <div>- 0 1</div>
+                        <div className={this.state.animate ? `reveal-text1`: `title-hidden`}>Scentric</div>
+                    </div>
                     <HoverPicture 
                         options={{}}
                         animate={this.state.animate}
@@ -91,27 +95,27 @@ export default class Works extends Component {
                     />
                     <div className='title-card-right'>
                         <div>- 0 2</div>
-                        {this.state.animate2 &&
-                            <div className={this.state.animate2 ? `reveal-text1`: ``}>Desert Lymphatic</div>
-                        }
-                        {!this.state.animate2 &&
-                            <div></div>
-                        }
+                            <div className={this.state.animate2 ? `reveal-text1`: `title-hidden`}>Desert Lymphatic</div>
                         </div>
                     <div className='project-description2'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        The Desert Lymphatic Massage (DLM) website was created using React. My goal with this website was to provide a very simple experience for a home startup that was satifying to look at but not to overwhelming. Because of the simplicity, this allows the customer to easily navigate the website to make reservations and find the business location with ease. 
                     </div>
                 </div>
 
 
-                <div className='projects works-top-margin'>
+                <div className='projects works-top-margin' ref={this.ref3}>
                     <div className='project-description'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        My time at BASIS started off as a part time employee learning the systems of the company and to absorb as much information as possible. After two months of employment I was hired full time to take on the responsibilities of managing the companies primary eCommerce system for thousands of customers. This includes cooperating with CIO's and Head of Operations of multiple schools to ensure their vision is delivered. 
+                    </div>
+                    <div className='title-card'>
+                        <div>- 0 3</div>
+                        <div className={this.state.animate3 ? `reveal-text1`: `title-hidden`}>BASIS.ed</div>
                     </div>
                     <HoverPicture 
                         options={{}}
+                        animate={this.state.animate3}
                         style={{
-                            background: `url(${DesertLymphaticStore}) no-repeat  center center`,
+                            background: `url(${BasisStore}) no-repeat  center center`,
                             backgroundSize: 'contain',
                             height: 440,
                             width: 780,

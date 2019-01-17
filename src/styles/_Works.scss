@@ -98,6 +98,7 @@ $primary-color: #c4ac6f;
         :nth-child(2) {
             letter-spacing: 4px;
             margin-top: 1%;
+            margin: 5px;
             font-size: 5em;
             font-weight: 500;
             color: #777;
@@ -108,6 +109,10 @@ $primary-color: #c4ac6f;
                 animation-duration: 500ms;
             }
     }
+}
+
+.title-hidden {
+    visibility: hidden;
 }
 
 @media(min-width: 1800px) {
