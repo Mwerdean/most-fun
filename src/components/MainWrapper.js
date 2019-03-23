@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Navbar from './Navbar'
 import TitleAnimation from './TitleAnimation'
 import Works from './Works'
-
+import About from './About'
 
 
 export default class MainWrapper extends Component {
@@ -22,6 +22,7 @@ export default class MainWrapper extends Component {
                     hamburger={this.state.hamburger}
                     />
                 <TitleAnimation left={this.state.hamburger} />
+                <About />
                 <Works />
                 <div className='nothing'></div>
             </div>

@@ -28,31 +28,30 @@ export default class Works extends Component {
         console.log(this.ref1)
         window.addEventListener('scroll', (event) => {
             let scrollTop = event.srcElement.scrollingElement.scrollTop
-            console.log(this.ref2)
-            if(scrollTop > this.ref1.current.scrollHeight + 200) {
+            if(scrollTop > this.ref1.current.offsetTop - 450) {
                 console.log(this.ref1.current.scrollHeight)
                 console.log('scrollTop', scrollTop)
                 this.setState({ animate: true })
             }
-            if(scrollTop > this.ref2.current.offsetTop - 400) {
+            if(scrollTop > this.ref2.current.offsetTop - 450) {
                 console.log('animate2:' ,this.state.animate2)
                 this.setState({ animate2: true })
             }          
-            if(scrollTop > this.ref3.current.offsetTop - 400) {
+            if(scrollTop > this.ref3.current.offsetTop - 450) {
                 console.log('animate2:' ,this.state.animate2)
                 this.setState({ animate3: true })
             }          
         })
     }
     componentWillUnmount() {
-
+        window.removeEventListener('scroll')
     }
     render() {
         return(
             <div className='body'>
                 <title>
-                        <div>Selected works</div>
-                        <div>2017 - 2018</div>
+                    <div>Selected works</div>
+                    <div>2017 - 2018</div>
                 </title>
                 <div className='projects' ref={this.ref1}>
                     <div className='project-description'>
@@ -90,12 +89,12 @@ export default class Works extends Component {
                             background: `url(${DesertLymphaticStore}) no-repeat  center center`,
                             backgroundSize: 'contain',
                             height: 410,
-                            width: 640,
+                            width: 630,
                         }}
                     />
                     <div className='title-card-right'>
                         <div>- 0 2</div>
-                            <div className={this.state.animate2 ? `reveal-text1`: `title-hidden`}>Desert Lymphatic</div>
+                            <div className={this.state.animate2 ? `reveal-text3`: `title-hidden`}>Desert Lymphatic</div>
                         </div>
                     <div className='project-description2'>
                         The Desert Lymphatic Massage (DLM) website was created using React. My goal with this website was to provide a very simple experience for a home startup that was satifying to look at but not to overwhelming. Because of the simplicity, this allows the customer to easily navigate the website to make reservations and find the business location with ease. 
@@ -118,7 +117,7 @@ export default class Works extends Component {
                             background: `url(${BasisStore}) no-repeat  center center`,
                             backgroundSize: 'contain',
                             height: 440,
-                            width: 780,
+                            width: 750,
                         }}
                     />
                 </div>

@@ -5,11 +5,12 @@ $primary-color: #c4ac6f;
     margin-top: 10%;
 
     > title {
-        width: 100%;
+        width: 50%;
         position: relative;
         left: 20%;
         display: block;
         font-size: 2.8em;
+        margin-bottom: 15%;
         :first-child {
             color: gray;
             opacity: 0.6;
@@ -51,6 +52,7 @@ $primary-color: #c4ac6f;
     left: 70%;
     margin-top: 13%;
     z-index: 1000;
+    overflow: hidden;
 }
 
 
@@ -59,10 +61,11 @@ $primary-color: #c4ac6f;
     position: relative;
         left: 20%;
     z-index: 500;
-    margin-top: 0px;
+    margin-top: -150px;
     margin-left: -18%;
+    margin-right: 1%;
     pointer-events: none;
-    width: 30%;
+    min-width: 24%;
         :first-child {
             font-size: 2em;
             color: gray;
@@ -72,11 +75,11 @@ $primary-color: #c4ac6f;
             font-size: 5em;
             font-weight: 500;
             color: #777;
-            animation-delay: 0.4s;
-            animation-duration: 500ms;
+            animation-delay: 0.6s;
+            animation-duration: 700ms;
             &::after {
-                animation-delay: 0.4s;
-                animation-duration: 500ms;
+                animation-delay: 0.6s;
+                animation-duration: 700ms;
             }
     }
 }
@@ -85,7 +88,7 @@ $primary-color: #c4ac6f;
     margin-left: -35%;
     position: relative;
     z-index: 500;
-    margin-top: 0px;
+    margin-top: -150px;
     pointer-events: none;
         :first-child {
             display: flex;
@@ -102,11 +105,11 @@ $primary-color: #c4ac6f;
             font-size: 5em;
             font-weight: 500;
             color: #777;
-            animation-delay: 0.4s;
-            animation-duration: 500ms;
+            animation-delay: 0.6s;
+            animation-duration: 700ms;
             &::after {
-                animation-delay: 0.4s;
-                animation-duration: 500ms;
+                animation-delay: 0.6s;
+                animation-duration: 700ms;
             }
     }
 }
