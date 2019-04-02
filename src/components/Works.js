@@ -25,7 +25,6 @@ export default class Works extends Component {
         this.ref3 = React.createRef()
     }
     componentWillMount() {
-        console.log(this.ref1)
         window.addEventListener('scroll', (event) => {
             let scrollTop = event.srcElement.scrollingElement.scrollTop
             if(scrollTop > this.ref1.current.offsetTop - 450) {

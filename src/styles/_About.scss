@@ -40,8 +40,7 @@ $primary-color: #c4ac6f;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-
+    opacity: 0;
     > div {
         display: flex;
         flex-direction: column;
@@ -71,7 +70,8 @@ $primary-color: #c4ac6f;
 
 .animate-icons {
     >div {
-        @for $i from 1 through 10 {         
+        
+        @for $i from 1 through 10 {  
             &:nth-child(#{$i}) {
                 animation-name: "icon";
                 animation-duration: 500ms * $i;
@@ -82,6 +82,33 @@ $primary-color: #c4ac6f;
         }
 
     }
+
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        margin-bottom: 5%;
+        > svg {
+            width: 25%;
+            margin: 15px;
+            transition: 500ms ease all;
+            fill: url(#gradient-vertical) gray;
+        }
+
+        svg:hover {
+            transform: scale(1.3)
+        }
+
+        > div {
+            font-size: 1.3em;
+            color:grey;
+        }
+    }
 }
 @keyframes icon {
     0% {
@@ -89,7 +116,7 @@ $primary-color: #c4ac6f;
     }
 
     100% {
-        opacity: 1;
+        opacity: 1 !important;
     }
 
 }

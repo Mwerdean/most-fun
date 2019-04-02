@@ -1,6 +1,24 @@
 import React, { Component } from 'react'
 
 export default class About extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            animate: false
+        }
+        this.ref1 = React.createRef()
+    }
+
+    componentWillMount() {
+        console.log(this.ref1)
+        window.addEventListener('scroll', (event) => {
+            let scrollTop = event.srcElement.scrollingElement.scrollTop
+            if(scrollTop > this.ref1.current.offsetTop - 450) {
+                console.log(this.ref1.current.scrollHeight)
+                this.setState({ animate: true })
+            }
+        })
+    }
     render() {
         return(
             <div className='about'>
@@ -9,7 +27,7 @@ export default class About extends Component {
                         <div>Programming Tools</div>
                     </title>
                 <section>
-                   <div className='dev-icons animate-icons'>
+                   <div className='dev-icons animate-icons' className={this.state.animate ? `animate-icons`: `dev-icons`}  ref={this.ref1}>
                         <div>
                             <svg viewBox="0 0 128 128">
                             <linearGradient id="gradient-horizontal">
