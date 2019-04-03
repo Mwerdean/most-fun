@@ -4,10 +4,14 @@
     width: 100px;
     display: inline-block;
     height: 100vh;
-    z-index: 100;
+    z-index: 1003;
     transition: all .5s ease-in-out;
 }
-
+@media(max-width: 1050px) {
+    .navbar {
+        display: none;
+    }
+}
 .lead-text {
     cursor: pointer;
 }
@@ -49,7 +53,7 @@
 .vertical-r {
     opacity: 0;
     transition: none;
-    
+    display: none;
 }
 
 .display-none {

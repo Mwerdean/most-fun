@@ -60,14 +60,15 @@ export default class Works extends Component {
                         <div>- 0 1</div>
                         <div className={this.state.animate ? `reveal-text1`: `title-hidden`}>Scentric</div>
                     </div>
+                    <a href='https://github.com/melodymennen/scentric'>
                     <HoverPicture 
                         options={{}}
                         animate={this.state.animate}
                         style={{
                             background: `url(${ScentricStore}) no-repeat  center center`,
                             backgroundSize: '780px 440px',
-                            height: 410,
-                            width: 640,
+                            height: 370,
+                            width: 575,
                         }}
                         >
                         <HoverPicture
@@ -77,20 +78,23 @@ export default class Works extends Component {
 
                         </HoverPicture>
                     </HoverPicture>
+                    </a>
                 </div>
 
 
                 <div className='projects works-top-margin' ref={this.ref2}>
+                    <a href='http://www.desertlymphatic.com'>
                     <HoverPicture 
                         options={{}}
                         animate={this.state.animate2}
                         style={{
                             background: `url(${DesertLymphaticStore}) no-repeat  center center`,
                             backgroundSize: 'contain',
-                            height: 410,
-                            width: 630,
+                            height: 370,
+                            width: 575,
                         }}
                     />
+                    </a>
                     <div className='title-card-right'>
                         <div>- 0 2</div>
                             <div className={this.state.animate2 ? `reveal-text3`: `title-hidden`}>Desert Lymphatic</div>
@@ -109,16 +113,18 @@ export default class Works extends Component {
                         <div>- 0 3</div>
                         <div className={this.state.animate3 ? `reveal-text1`: `title-hidden`}>BASIS.ed</div>
                     </div>
-                    <HoverPicture 
-                        options={{}}
-                        animate={this.state.animate3}
-                        style={{
-                            background: `url(${BasisStore}) no-repeat  center center`,
-                            backgroundSize: 'contain',
-                            height: 440,
-                            width: 750,
-                        }}
-                    />
+                    <a href='https://shop.basised.com'>
+                        <HoverPicture 
+                            options={{}}
+                            animate={this.state.animate3}
+                            style={{
+                                background: `url(${BasisStore}) no-repeat  center center`,
+                                backgroundSize: 'contain',
+                                height: 370,
+                                width: 575,
+                            }}
+                        />
+                    </a>
                 </div>
             </div>
         )

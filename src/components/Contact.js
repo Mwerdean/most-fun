@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import portrait from '../assets/portrait.jpg'
-
+import resume from '../assets/resume.jpg'
 export default class Contact extends Component {
     render() {
         return(
@@ -17,10 +17,9 @@ export default class Contact extends Component {
                         </div>
                         <div className='contact-buttons'>
                             <a href="mailto:mwerdean@gmail.com"><span>Contact</span></a>
-                            <a><span>Resume</span></a>
+                            <a href={resume} download><span>Resume</span></a>
                         </div>
                     </div>
-                    
                 </div>
                 
             </div>

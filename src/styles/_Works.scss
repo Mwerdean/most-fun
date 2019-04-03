@@ -9,7 +9,7 @@ $primary-color: #c4ac6f;
         position: relative;
         left: 20%;
         display: block;
-        font-size: 2.8em;
+        font-size: 2.5em;
         margin-bottom: 15%;
         :first-child {
             color: gray;
@@ -23,12 +23,22 @@ $primary-color: #c4ac6f;
     }
 }
 
+@media (max-width: 1050px) {
+    .body {
+        display: none;
+        > title {
+            font-size: 1.5em;
+        }
+    }
+}
+
 
 .projects {
     margin-top: 5%;
     display: flex;
     justify-content: center;
 }
+
 
 .project-description {
     text-align: right;
@@ -41,6 +51,7 @@ $primary-color: #c4ac6f;
 
 .project-description2 {
     margin-top: 10%;
+    margin-left: 0%;
     width: 30%;
     color: white;
     opacity: .8;
@@ -51,7 +62,7 @@ $primary-color: #c4ac6f;
     position: relative;
     left: 70%;
     margin-top: 13%;
-    z-index: 1000;
+    z-index: 999;
     overflow: hidden;
 }
 
@@ -67,12 +78,12 @@ $primary-color: #c4ac6f;
     pointer-events: none;
     min-width: 24%;
         :first-child {
-            font-size: 2em;
+            font-size: 1.8em;
             color: gray;
             opacity: .6;
         }
         :nth-child(2) {
-            font-size: 5em;
+            font-size: 4.4em;
             font-weight: 500;
             color: #777;
             animation-delay: 0.6s;
@@ -85,7 +96,7 @@ $primary-color: #c4ac6f;
 }
 
 .title-card-right {
-    margin-left: -35%;
+    margin-left: -40%;
     position: relative;
     z-index: 500;
     margin-top: -150px;
@@ -94,7 +105,7 @@ $primary-color: #c4ac6f;
             display: flex;
             flex-direction: row-reverse;
             width: 100%;
-            font-size: 2em;
+            font-size: 1.8em;
             color: gray;
             opacity: .6;
         }
@@ -102,7 +113,7 @@ $primary-color: #c4ac6f;
             letter-spacing: 4px;
             margin-top: 1%;
             margin: 5px;
-            font-size: 5em;
+            font-size: 4.4em;
             font-weight: 500;
             color: #777;
             animation-delay: 0.6s;

@@ -78,3 +78,27 @@ $primary-color: #c4ac6f;
         transform: translateY(1px)
     }
 }
+
+@media(max-width: 1050px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+        > title {
+            font-size: 1.5em;
+        }
+    }
+
+    .contact-info {
+        display: initial;
+        text-align: center;
+        >div {
+            margin: 0px;
+            padding: 20px;
+            width: 90%;
+            > div {
+                font-size: .8em;
+                text-align: left;
+            }
+        }
+    }
+}

@@ -9,7 +9,7 @@ $primary-color: #c4ac6f;
         position: relative;
         left: 20%;
         display: block;
-        font-size: 2.8em;
+        font-size: 2.5em;
         margin-bottom: 8%;
         :first-child {
             color: gray;
@@ -26,6 +26,14 @@ $primary-color: #c4ac6f;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width: 1050px) {
+    .about {
+        > title {
+            font-size: 1.5em;
+        }
     }
 }
 

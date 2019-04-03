@@ -253,7 +253,11 @@
     transition: all .5s ease-in-out;
 
 }
-
+@media(max-width: 1050px) {
+    .arrow {
+        left: 47%;
+    }
+}
 
 .arrow-first {
     animation: arrow-movement 2s 4s ease-in-out infinite;

@@ -8,15 +8,15 @@ export default class Social extends Component {
     render() {
         return(
             <div className='social'>
-                <div className='socialmate'>
+                <a className='socialmate' href='https://twitter.com/werdean'>
                     <FontAwesomeIcon icon={['fab', 'twitter']} size="2x"/>
-                </div>
-                <div className='socialmate'>
+                </a>
+                <a className='socialmate' href='https://www.linkedin.com/in/matthew-werdean-742334158/'>
                     <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x"/>
-                </div>
-                <div className='socialmate'>
+                </a>
+                <a className='socialmate' href='https://github.com/Mwerdean'>
                     <FontAwesomeIcon icon={['fab', 'github']} size="2x"/>
-                </div>
+                </a>
             </div>
         )
     }

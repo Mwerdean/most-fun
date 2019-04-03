@@ -4,6 +4,7 @@ import TitleAnimation from './TitleAnimation'
 import Works from './Works'
 import About from './About'
 import Contact from './Contact'
+import Footer from './Footer'
 
 
 export default class MainWrapper extends Component {
@@ -40,6 +41,7 @@ export default class MainWrapper extends Component {
                 <About aboutRef={this.aboutRef}/>
                 <Works worksRef={this.worksRef}/>
                 <Contact contactRef={this.contactRef}/>
+                <Footer />
             </div>
         )
     }
