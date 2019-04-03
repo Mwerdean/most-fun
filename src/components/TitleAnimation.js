@@ -3,7 +3,7 @@ import Social from './Social'
 export default class TitleAnimation extends Component {
   render() {
     return (
-        <div className='header'>
+        <div className='header' ref={this.props.titleRef}>
             <Social />
             
             <div className='reveal-body'>

@@ -47,7 +47,7 @@ export default class Works extends Component {
     }
     render() {
         return(
-            <div className='body'>
+            <div className='body' ref={this.props.worksRef}>
                 <title>
                     <div>Selected works</div>
                     <div>2017 - 2018</div>

@@ -21,7 +21,7 @@ export default class About extends Component {
     }
     render() {
         return(
-            <div className='about'>
+            <div className='about' ref={this.props.aboutRef}>
                     <title>
                         <div>About</div>
                         <div>Programming Tools</div>

@@ -11,6 +11,19 @@ export default class Navbar extends Component {
     componentWillUnmount() {
         this.setState({show: false})
     }
+    handleNavChange = (field) => {
+        if(this.props.titleRef.current) {
+            if(field === 'home') {
+                window.scrollTo({top:this.props.titleRef.current.offsetTop, left: 0, behavior:'smooth'})
+            } else if(field === 'about') {
+                window.scrollTo({top:this.props.aboutRef.current.offsetTop, left: 0, behavior:'smooth'})
+            } else if(field === 'works') {
+                window.scrollTo({top:this.props.worksRef.current.offsetTop, left: 0, behavior:'smooth'})
+            } else if(field === 'contact') {
+                window.scrollTo({top:this.props.contactRef.current.offsetTop, left: 0, behavior:'smooth'})
+            }
+        }
+    }
   render() {
     return (
         <div>
@@ -32,19 +45,19 @@ export default class Navbar extends Component {
                         <div className={`display-none ${this.props.hamburger ? 'menu-options' : ''}`} >
                             <div>
                                 <div className='front-text'>Home</div>
-                                <div className='lead-text'>Intro</div>
+                                <a className='lead-text' onClick={() => this.handleNavChange('home')}>Intro</a>
                             </div>
                             <div>
                                 <div className='front-text'>Find Out</div>
-                                <div className='lead-text'>About</div>
+                                <a className='lead-text' onClick={() => this.handleNavChange('about')}>About</a>
                             </div>
                             <div>
                                 <div className='front-text'>Selection</div>
-                                <div className='lead-text'>Projects</div>
+                                <a className='lead-text' onClick={() => this.handleNavChange('works')}>Projects</a>
                             </div>
                             <div>
                                 <div className='front-text'>Lets Chat</div>
-                                <div className='lead-text'>Contact</div>
+                                <a className='lead-text' onClick={() => this.handleNavChange('contact')}>Contact</a>
                             </div>
                         </div>
                     </div>

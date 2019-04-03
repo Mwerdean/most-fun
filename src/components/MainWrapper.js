@@ -7,8 +7,15 @@ import Contact from './Contact'
 
 
 export default class MainWrapper extends Component {
-    state = {
-        hamburger: false
+    constructor(props) {
+        super(props)
+        this.state = {
+            hamburger: false
+        }
+        this.titleRef = React.createRef()
+        this.aboutRef = React.createRef()
+        this.worksRef = React.createRef()
+        this.contactRef = React.createRef()
     }
 
     handleHamburger = () => {
@@ -21,12 +28,18 @@ export default class MainWrapper extends Component {
                 <Navbar 
                     handleHamburger={this.handleHamburger}
                     hamburger={this.state.hamburger}
+                    titleRef={this.titleRef}
+                    aboutRef={this.aboutRef}
+                    worksRef={this.worksRef}
+                    contactRef={this.contactRef}
                     />
-                <TitleAnimation left={this.state.hamburger} />
-                <About />
-                <Works />
-                <Contact />
-                <div className='nothing'></div>
+                <TitleAnimation 
+                    left={this.state.hamburger} 
+                    titleRef={this.titleRef}
+                    />
+                <About aboutRef={this.aboutRef}/>
+                <Works worksRef={this.worksRef}/>
+                <Contact contactRef={this.contactRef}/>
             </div>
         )
     }

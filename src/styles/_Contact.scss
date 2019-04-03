@@ -1,5 +1,8 @@
+$primary-color: #c4ac6f;
+
 .contact {
     margin-top: 20%;
+    padding-bottom: 20%;
     > title {
         width: 50%;
         position: relative;
@@ -44,5 +47,34 @@
         > button {
             width: 10%;
         }
+    }
+}
+
+
+.contact-buttons {
+    display: flex;
+    width: 100%;
+    > a {
+        padding: 13px 34px;
+        margin-right: 40px;
+        margin-top: 20px;
+        background-color: lighten($primary-color, 12%);
+        border: none;
+        transition: 300ms ease all;
+        color: white;
+        letter-spacing: 1px;
+        cursor: pointer;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-transform: uppercase;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    > a:hover {
+        transform: scale(1.1)
+    }
+
+    > a:active {
+        transform: translateY(1px)
     }
 }
